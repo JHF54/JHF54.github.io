@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Horácio Almerndra | Desenvolvedor Python</title>
+  <style>
+    /* Reset e base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    h1, h2, h3 {
+      color: #00ffe1;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #1e1e1e;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    nav a {
+      color: #f0f0f0;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ffe1;
+    }
+
+    /* Hero */
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      background: linear-gradient(145deg, #1e1e1e, #121212);
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #ccc;
+    }
+
+    .btn {
+      background-color: #00ffe1;
+      color: #121212;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #00c8b0;
+      transform: scale(1.05);
+    }
+
+    /* Seções */
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .projetos-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .projeto-card {
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-left: 4px solid #00ffe1;
+      border-radius: 5px;
+      transition: transform 0.3s;
+    }
+
+    .projeto-card:hover {
+      transform: translateY(-5px);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      color: #fff;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #00ffe1;
+      color: #121212;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #00c8b0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1e1e1e;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    /* Animação */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Horácio Almerndra</h1>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Olá, sou Horácio</h2>
+    <p>Desenvolvedor Python em início de carreira, buscando projetos reais e desafiadores.</p>
+    <a href="#contato" class="btn">Entre em contato</a>
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre mim</h2>
+    <p>Sou um programador Python recém-formado, apaixonado por tecnologia e automação. Busco aplicar o que aprendi em projetos práticos e impactantes.</p>
+  </section>
+
+  <section id="habilidades">
+    <h2>Habilidades</h2>
+    <ul>
+      <li>Python (básico a intermediário)</li>
+      <li>APIs com Flask e FastAPI</li>
+      <li>Automação de tarefas</li>
+      <li>HTML, CSS e JavaScript</li>
+      <li>Banco de dados (SQLite, PostgreSQL)</li>
+    </ul>
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos</h2>
+    <div class="projetos-container">
+      <div class="projeto-card">
+        <h3>Bot de automação</h3>
+        <p>Um script Python que automatiza envio de e-mails com anexos personalizados.</p>
+      </div>
+      <div class="projeto-card">
+        <h3>API REST com FastAPI</h3>
+        <p>Pequena API para cadastro de usuários com autenticação básica.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <form id="form-contato">
+      <input type="text" placeholder="Seu nome" required />
+      <input type="email" placeholder="Seu email" required />
+      <textarea placeholder="Sua mensagem" rows="4" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Horácio Almerndra. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Rolagem suave e animações ao rolar
+    const sections = document.querySelectorAll("section");
+
+    const showSectionOnScroll = () => {
+      const trigger = window.innerHeight * 0.85;
+
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+
+        if (sectionTop < trigger) {
+          section.classList.add("visible");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", showSectionOnScroll);
+    window.addEventListener("load", showSectionOnScroll);
+
+    // Simula envio do formulário
+    document.getElementById('form-contato').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Mensagem enviada! Obrigado pelo contato.');
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
